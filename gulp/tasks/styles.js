@@ -22,7 +22,7 @@ gulp.task('styles', function () {
     }))
     .on('error', handleErrors)
     .pipe(autoprefixer({
-      browsers: ['last 2 versions', '> 1%', 'ie 8']
+      browsers: ['last 1 version', 'ie >=10']
     }))
     .pipe(gulpif(
       createSourcemap,
