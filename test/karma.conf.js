@@ -1,5 +1,3 @@
-const istanbul = require('browserify-istanbul');
-const isparta  = require('isparta');
 const gutil = require('gulp-util');
 
 const karmaBaseConfig = {
@@ -28,16 +26,7 @@ const karmaBaseConfig = {
 
   browserify: {
     debug: true,
-    extensions: ['.js'],
-    transform: [
-      'babelify',
-      'browserify-ngannotate',
-      'bulkify',
-      istanbul({
-        instrumenter: isparta,
-        ignore: ['**/node_modules/**', '**/test/**']
-      })
-    ]
+    extensions: ['.js']
   },
 
   proxies: {
